@@ -1,9 +1,20 @@
-import pandas as pd
 import os
+from pathlib import Path
+import pandas as pd
 
-DATASET_PATH = os.path.expanduser(
-    "~/Downloads/MachineLearningCSV/MachineLearningCVE"
-)
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Check local project data directory first, fallback to user Downloads directory
+DATASET_PATH = BASE_DIR / "data" / "MachineLearningCVE"
+if not DATASET_PATH.exists():
+    fallback = Path.home() / "Downloads" / "MachineLearningCSV" / "MachineLearningCVE"
+    if fallback.exists():
+        DATASET_PATH = fallback
+
+if not DATASET_PATH.exists():
+    print(f"Dataset directory not found at {DATASET_PATH} or {Path.home() / 'Downloads' / 'MachineLearningCSV' / 'MachineLearningCVE'}")
+    print("Please unzip 'MachineLearningCSV.zip' into 'data/MachineLearningCVE/' or your Downloads folder.")
+    exit(1)
 
 files = [f for f in os.listdir(DATASET_PATH) if f.endswith(".csv")]
 

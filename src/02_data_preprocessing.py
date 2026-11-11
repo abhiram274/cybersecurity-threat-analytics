@@ -1,14 +1,24 @@
+import os
+from pathlib import Path
 import pandas as pd
 import numpy as np
-import os
 
-INPUT_DIR = os.path.expanduser(
-    "~/Downloads/MachineLearningCSV/MachineLearningCVE"
-)
+BASE_DIR = Path(__file__).resolve().parent.parent
 
-OUTPUT_DIR = "results/cleaned_data"
+# Check local project data directory first, fallback to user Downloads directory
+INPUT_DIR = BASE_DIR / "data" / "MachineLearningCVE"
+if not INPUT_DIR.exists():
+    fallback = Path.home() / "Downloads" / "MachineLearningCSV" / "MachineLearningCVE"
+    if fallback.exists():
+        INPUT_DIR = fallback
 
-os.makedirs(OUTPUT_DIR, exist_ok=True)
+if not INPUT_DIR.exists():
+    print(f"Dataset directory not found at {INPUT_DIR} or {Path.home() / 'Downloads' / 'MachineLearningCSV' / 'MachineLearningCVE'}")
+    print("Please unzip 'MachineLearningCSV.zip' into 'data/MachineLearningCVE/' or your Downloads folder.")
+    exit(1)
+
+OUTPUT_DIR = BASE_DIR / "results" / "cleaned_data"
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 files = sorted(f for f in os.listdir(INPUT_DIR) if f.endswith(".csv"))
 

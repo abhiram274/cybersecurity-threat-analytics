@@ -11,26 +11,34 @@ env/
 ENV/
 .env
 
-# Large datasets & Raw data
-data/
-*.csv
-*.csv.gz
-*.parquet
-*.parquet/
+# Large raw datasets & large archive files (>100MB)
+data/*.csv
+data/MachineLearningCVE/
+*.zip
+*.tar.gz
+*.tgz
 
-# Execution outputs (keep directory structure if needed via gitkeep)
-results/cleaned_data/*
-results/parquet/*
-results/anomalies/*
-results/analytics/*
-results/ml/*
-!results/**/.gitkeep
+# Preserve empty data folder structure
+!data/.gitkeep
+!results/cleaned_data/.gitkeep
+
+# Exclude multi-hundred MB raw parquet files (370+ MB total) to keep git repository fast & clean
+results/parquet/
+
+# Spark CRC checksum metadata files
+.*.crc
+results/**/.*.crc
+
+# Track all analytics reports, charts, metrics, and anomaly detection results
+!results/analytics/
+!results/anomalies/
+!results/ml/
 
 # Large binary ML models (>50MB, models folder tracked lightly)
 models/random_forest/
 models/isolation_forest.joblib
 
-# Keep metadata in repo
+# Keep metadata and config in repo
 !models/label_mapping.json
 !models/feature_names.json
 !models/Readme.md

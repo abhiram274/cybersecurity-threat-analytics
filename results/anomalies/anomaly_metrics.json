@@ -1,0 +1,11 @@
+{
+    "algorithm": "Isolation Forest",
+    "sample_records": 150000,
+    "benign_training_records": 124512,
+    "features": 70,
+    "anomalies_detected": 12064,
+    "accuracy": 0.8772933333333334,
+    "precision": 0.7935179045092838,
+    "recall": 0.3755885122410546,
+    "f1_score": 0.5098530038346826
+}
