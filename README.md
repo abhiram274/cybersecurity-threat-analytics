@@ -36,6 +36,25 @@ flowchart TD
 
 ---
 
+## 📸 Visual Dashboard & Output Screenshots
+
+The framework outputs distributed query aggregations, ML evaluation metrics, and unified real-time alert logs. Visualizations of these outputs can be found in the [`screenshots/`](screenshots/) directory:
+
+| Screenshot | Description |
+| :--- | :--- |
+| ![Spark SQL Analytics](screenshots/01_spark_sql_analytics_dashboard.png) | **Spark SQL Analytics Dashboard**: Attack distribution bar breakdown, traffic ratio (83.1% Benign vs 16.9% Malicious), and flow duration/packet statistics. |
+| ![ML Benchmark Results](screenshots/02_ml_models_benchmark_results.png) | **Machine Learning Benchmarks**: Side-by-side performance comparison of Random Forest (99.55% accuracy) vs Isolation Forest (79.35% precision on 12k+ zero-day anomalies). |
+| ![Unified Terminal Execution](screenshots/03_unified_threat_pipeline_execution.png) | **Unified Pipeline Execution**: Terminal log illustrating real-time classification, severity scoring (`CRITICAL`, `HIGH`, `MEDIUM`), and packet flow metadata. |
+
+---
+
+## 📚 Technical Interview & Preparation Guide
+
+For in-depth viva questions, architecture breakdowns, model choices, and component explanations, see the dedicated guide:  
+👉 **[PROJECT_PREPARATION_GUIDE.md](PROJECT_PREPARATION_GUIDE.md)**
+
+---
+
 ## 📁 Repository & Folder Structure
 
 ```
