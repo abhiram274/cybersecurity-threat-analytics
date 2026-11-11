@@ -1,0 +1,44 @@
+# Python cache and byte-compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environments
+venv/
+.venv/
+env/
+ENV/
+.env
+
+# Large datasets & Raw data
+data/
+*.csv
+*.csv.gz
+*.parquet
+*.parquet/
+
+# Execution outputs (keep directory structure if needed via gitkeep)
+results/cleaned_data/*
+results/parquet/*
+results/anomalies/*
+results/analytics/*
+results/ml/*
+!results/**/.gitkeep
+
+# Large binary ML models (>50MB, models folder tracked lightly)
+models/random_forest/
+models/isolation_forest.joblib
+
+# Keep metadata in repo
+!models/label_mapping.json
+!models/feature_names.json
+!models/Readme.md
+
+# Logs & temp files
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.ipynb_checkpoints/

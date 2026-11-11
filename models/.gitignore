@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+.env
+
+# Dataset files
+data/
+*.csv
+*.csv.gz
+*.parquet
+*.parquet/
+
+# Generated results
+results/cleaned_data/
+results/parquet/
+results/anomalies/
+results/analytics/
+results/ml/confusion_matrix/
+
+# Trained models
+models/random_forest/
+models/isolation_forest.joblib
+
+# Keep lightweight model metadata
+!models/label_mapping.json
+!models/feature_names.json
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
