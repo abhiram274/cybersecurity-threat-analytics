@@ -66,10 +66,11 @@ The framework outputs distributed query aggregations, ML evaluation metrics, and
 
 ---
 
-## 📚 Technical Interview & Preparation Guide
+## 📚 In-Depth Technical & Preparation Guides
 
-For in-depth viva questions, architecture breakdowns, model choices, and component explanations, see the dedicated guide:  
-👉 **[PROJECT_PREPARATION_GUIDE.md](PROJECT_PREPARATION_GUIDE.md)**
+For viva preparation, technical interviews, and understanding the distributed Hadoop/Spark architecture:
+- 👉 **[COMPREHENSIVE_MASTER_GUIDE.md](COMPREHENSIVE_MASTER_GUIDE.md)**: Exhaustive manual detailing Hadoop filesystem mechanisms (`part-00000`, `_SUCCESS`, CRC), step-by-step commands, ML mathematical foundations, and viva questions.
+- 👉 **[PROJECT_PREPARATION_GUIDE.md](PROJECT_PREPARATION_GUIDE.md)**: High-level overview of business impact, tech stack table, and Q&A summary.
 
 ---
 
