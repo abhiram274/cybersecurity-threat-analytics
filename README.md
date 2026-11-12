@@ -36,6 +36,24 @@ flowchart TD
 
 ---
 
+## 🖥️ Interactive Web SOC Analytics Dashboard
+
+In addition to static screenshots, an interactive, live web dashboard is included with dynamic Chart.js visualizations, real-time alert triage tables, and KPI metric cards.
+
+To launch the dashboard locally:
+```bash
+# On Windows
+start dashboard.html
+
+# On macOS
+open dashboard.html
+
+# On Linux
+xdg-open dashboard.html
+```
+
+---
+
 ## 📸 Visual Dashboard & Output Screenshots
 
 The framework outputs distributed query aggregations, ML evaluation metrics, and unified real-time alert logs. Visualizations of these outputs can be found in the [`screenshots/`](screenshots/) directory:
